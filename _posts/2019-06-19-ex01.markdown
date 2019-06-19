@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "포스트 예시 1"
+date:   2019-06-19 01:27:38 +0900
+categories: jekyll update
+---
+포스트 예시 1

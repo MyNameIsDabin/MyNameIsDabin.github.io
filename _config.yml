@@ -1,25 +1,32 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: 내 이름은 다빈
 email: dorothy9795@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 짹짹
-github_username: MyNameIsDabin
+profile_logo: /images/profile-logo.gif
+
+navigation:
+  - name: 소개
+    url: /about
+  - name: 글
+    url: /
+
+footer-links:
+  behance: # https://www.behance.net/<username>
+  dribbble:
+  email: # dorothy9795@gmail.com
+  facebook:
+  flickr:
+  github: MyNameIsDabin
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  instagram:
+  linkedin:
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  tumblr: # https://<username>.tumblr.com
+  twitter: 
+  youtube: # channel/<your_long_string> or user/<user-name>
 
 # Build settings
 markdown: kramdown
