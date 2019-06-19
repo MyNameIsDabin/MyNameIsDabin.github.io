@@ -4,11 +4,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 profile_logo: /images/profile-logo.gif
+paginate: 2
+paginate_path: "paging/page:num"
 
 navigation:
   - name: 소개
     url: /about
-  - name: 글
+  - name: 최신 글
     url: /
 
 footer-links:
@@ -33,6 +35,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
