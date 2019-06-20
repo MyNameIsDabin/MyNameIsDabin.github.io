@@ -17,8 +17,8 @@ navigation:
     url: /
   - name: 최신 글
     url: /recently
-  # - name: 자바스크립트
-  #   url: /javascript
+  - name: 글 목록
+    url: /category-list
 
 footer-links:
   behance: # https://www.behance.net/<username>
