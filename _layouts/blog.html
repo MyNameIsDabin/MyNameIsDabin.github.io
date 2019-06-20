@@ -22,13 +22,14 @@ layout: default
     <span>&laquo; Prev</span>
     {% endif %}
 
+    {%- assign _page = page -%}
     {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
     <em>{{ page }}</em>
     {% elsif page == 1 %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
-    <a href="{{ page | prepend: site.baseurl }}">{{ page }}</a>
+    <a href="{{ _page.pagination.permalink | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
     {% endfor %}
 
