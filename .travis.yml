@@ -2,6 +2,7 @@ language: ruby
 # only run CI-builds on master branch
 branches:
   only:
+  - gh-pages     # test the gh-pages branch    
   - master
 rvm:
 - 2.5.5
