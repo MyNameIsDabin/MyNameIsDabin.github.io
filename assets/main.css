@@ -234,14 +234,44 @@ table {
       padding-right: 45px; } }
 
 .site-nav {
+  position: relative;
   display: flex; }
   .site-nav a {
-    padding: 0 32px;
+    padding: 0 16px;
     vertical-align: middle;
-    border-bottom: 2px solid white; }
-    .site-nav a:hover {
-      text-decoration: none;
-      border-bottom: 2px solid black; }
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 10%; }
+  .site-nav .current-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 10%;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+    padding: 0 16px; }
+  .site-nav a:nth-child(1).active ~ .current-bar {
+    left: 0; }
+  .site-nav a:nth-child(2).active ~ .current-bar {
+    left: calc(10% + 32px); }
+  .site-nav a:nth-child(3).active ~ .current-bar {
+    left: calc(20% + 64px); }
+  .site-nav a:nth-child(4).active ~ .current-bar {
+    left: calc(30% + 96px); }
+  .site-nav a:nth-child(5).active ~ .current-bar {
+    left: calc(40% + 128px); }
+  .site-nav a:nth-child(1):hover ~ .current-bar {
+    left: 0; }
+  .site-nav a:nth-child(2):hover ~ .current-bar {
+    left: calc(10% + 32px); }
+  .site-nav a:nth-child(3):hover ~ .current-bar {
+    left: calc(20% + 64px); }
+  .site-nav a:nth-child(4):hover ~ .current-bar {
+    left: calc(30% + 96px); }
+  .site-nav a:nth-child(5):hover ~ .current-bar {
+    left: calc(40% + 128px); }
 
 /**
  * Site footer
