@@ -16,6 +16,8 @@ navigation:
   - name: 소개
     url: /
   - name: 최신 글
+    url: /recently
+  - name: 자바스크립트
     url: /javascript
 
 footer-links:
