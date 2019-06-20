@@ -1,47 +1,141 @@
----
-title: "최근 글"
-layout: default
-permalink: "/recently.html"
-pagination: 
-  enabled: true
----
-<div class="home">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Page 3 of 3 for 최근 글 - page 3 | 초긍정 개발자 다빈</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="최근 글 - page 3" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="/recently.html" />
+<meta property="og:url" content="/recently.html" />
+<meta property="og:site_name" content="초긍정 개발자 다빈" />
+<link rel="prev" href="/page2/" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/recently.html","headline":"최근 글 - page 3","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="초긍정 개발자 다빈" /></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><div class="title-header">
+      <img class="profile-logo" src="/images/profile-logo.gif"></img>
+      <a class="site-title" rel="author" href="/">초긍정 개발자 다빈</a>
+    </div>
+
+    <nav class="site-nav">
+      
+      
+      
+      
+      <a href="/" class="active">소개</a>
+      
+      
+      
+      
+      
+      <a href="/recently" class="active">최신 글</a>
+      
+      
+      
+      
+      
+      <a href="/javascript" class="">자바스크립트</a>
+      
+      
+    </nav>
+  </div>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
   <!-- This loops through the paginated posts -->
-  {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  
+  <h1><a href="/jekyll/2019/06/17/ex02.html">포스트 예시 2</a></h1>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <span class="date">2019-06-17 16:27:38 +0000</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    <p>포스트 예시 2</p>
+
   </div>
-  {% endfor %}
+  
+  <h1><a href="/jekyll/2019/06/16/ex01.html">포스트 예시 1</a></h1>
+  <p class="author">
+    <span class="date">2019-06-16 16:27:38 +0000</span>
+  </p>
+  <div class="content">
+    <p>포스트 예시 1</p>
+
+  </div>
+  
 
   <!-- Pagination links -->
-  {% if paginator.total_pages > 1 %}
+  
   <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-    <span>&laquo; Prev</span>
-    {% endif %}
+    
+    <a href="/page2/">&laquo; Prev</a>
+    
 
-    {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <em>{{ page }}</em>
-    {% elsif page == 1 %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
+    
+    
+    <a href="/page2/">1</a>
+    
+    
+    
     <a
-      href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-    {% endfor %}
+      href="/page2">2</a>
+    
+    
+    
+    <em>3</em>
+    
+    
 
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
+    
     <span>Next &raquo;</span>
-    {% endif %}
+    
   </div>
-  {% endif %}
+  
 </div>
+      </div>
+    </main><footer class="site-footer h-card">
+  <div class="wrapper">  
+    <div class="social-links"><!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    <li><a href="https://github.com/MyNameIsDabin" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </ul></div>
+  </div>
+</footer></body>
+
+</html>
