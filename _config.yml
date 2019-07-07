@@ -7,7 +7,7 @@ profile_logo: /images/profile-logo.gif
 
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 3
   limit: 0
   sort_field: "date"
   sort_reverse: true
