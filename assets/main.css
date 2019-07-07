@@ -206,7 +206,7 @@ table {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
+  padding-top: 5px;
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
   line-height: 3.88125rem;
@@ -248,31 +248,36 @@ table {
     text-align: center;
     content: '';
     height: 2px;
-    background: #000;
+    background-color: black;
     transition: .3s; }
 
 .home.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 230px);
-  grid-gap: 10px;
-  justify-content: center;
-  width: 100%; }
+  grid-template-columns: repeat(auto-fit, 210px);
+  grid-row-gap: 15px;
+  justify-content: center; }
 .home img {
-  min-width: 214px;
-  min-height: 214px; }
+  min-height: 200px; }
 .home .post-card {
   margin: 4px 8px;
-  box-shadow: 0px 2px 4px 0px #11111126;
+  box-shadow: 0px 2px 6px 0px #11111126;
   border-radius: 12px;
   text-align: center;
   overflow: hidden; }
-  .home .post-card h1 {
-    font-size: 1.5rem;
+  .home .post-card .title {
+    display: block;
+    font-size: 1.3rem;
     margin: 5px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    color: white; }
+  .home .post-card div {
+    background-color: black; }
   .home .post-card .date {
+    display: inline-block;
     font-size: 0.8rem;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 8px;
+    color: white; }
 
 /**
  * Site footer
