@@ -66,23 +66,25 @@
     justify-content: center;
   }
   img {
-    min-width: 210px;
-    min-height: 210px;
+    min-height: 200px;
   }
   .post-card {
     margin: 4px 8px;
-    box-shadow: 0px 2px 4px 0px #11111126;
+    box-shadow: 0px 2px 6px 0px #11111126;
     border-radius: 12px;
     text-align: center;
     overflow: hidden;
-    h1 {
-      font-size: 1.5rem;
+    .title {
+      display: block;
+      font-size: 1.3rem;
       margin: 5px;
       margin-bottom: 0px;
     }
     .date {
+      display: inline-block;
       font-size: 0.8rem;
       font-weight: bold;
+      margin: 8px;
     }
   }
 }
