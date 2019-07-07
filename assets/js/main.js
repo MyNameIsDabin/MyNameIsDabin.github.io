@@ -19,7 +19,6 @@ function initNavigationEvents(selectorUnderLine, selectorNavElements) {
     });
   })
   function moveUnderLine(el, dist) {
-    console.log(el);
     underLine.style.left = dist + "px"
     underLine.style.width = el.offsetWidth + "px";
   }
