@@ -62,14 +62,12 @@
 .home {
   &.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 230px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 210px);
     justify-content: center;
-    width: 100%;
   }
   img {
-    min-width: 214px;
-    min-height: 214px;
+    min-width: 210px;
+    min-height: 210px;
   }
   .post-card {
     margin: 4px 8px;
