@@ -62,35 +62,29 @@
 .home {
   &.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 210px);
+    grid-template-columns: repeat(auto-fit, 370px);
     grid-row-gap: 15px;
     justify-content: center;
   }
   img {
-    min-height: 200px;
+    max-width: 150px;
   }
   .post-card {
     margin: 4px 8px;
-    box-shadow: 0px 2px 6px 0px #11111126;
-    border-radius: 12px;
-    text-align: center;
+    text-align: center; 
     overflow: hidden;
+    display: flex;
     .title {
       display: block;
       font-size: 1.3rem;
       margin: 5px;
       margin-bottom: 0px;
-      color: white;
-    }
-    div {
-      background-color: black;
     }
     .date {
       display: inline-block;
       font-size: 0.8rem;
       font-weight: bold;
       margin: 8px;
-      color: white;
     }
   }
 }
