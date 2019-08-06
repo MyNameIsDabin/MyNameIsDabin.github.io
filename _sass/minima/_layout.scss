@@ -69,22 +69,49 @@
   img {
     max-width: 150px;
   }
+  .post-card-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+  }
   .post-card {
     margin: 4px 8px;
-    text-align: center; 
     overflow: hidden;
     display: flex;
+    width: 100%;
+    .excerpt {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      margin: 0;
+      font-size: 1.0rem;
+      p {
+        margin: 0;
+      }
+    }
+    .category {
+      font-size: 0.9rem;
+      color: gray;
+    }
     .title {
       display: block;
       font-size: 1.3rem;
-      margin: 5px;
-      margin-bottom: 0px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 210px;
     }
     .date {
       display: inline-block;
       font-size: 0.8rem;
       font-weight: bold;
-      margin: 8px;
+      color: gray;
     }
   }
 }

@@ -8,9 +8,15 @@ layout: default
       <a href="{{ post.url }}">
         <img src="{{ post.thumbnail }}"></img>
       </a>
-      <div>
-        <a class="title" href="{{ post.url }}">{{ post.title }}</a>
-        <span class="date">{{ post.date | date: "%a, %B %-d, %Y"}}</span>
+      <div class="post-card-preview">
+        <div>
+          <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+          <div class="excerpt">{{ post.excerpt }}</div>
+        </div>
+        <div>
+          <div class="category">{{ post.categories }}</div>
+          <div class="date">{{ post.date | date: "%a, %B %-d, %Y"}}</div>
+        </div>
       </div>
     </div>
   {% endfor %}
