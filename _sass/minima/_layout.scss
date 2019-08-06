@@ -17,6 +17,11 @@
     height: 90px;
     border-radius: 50%;
     margin: 10px 20px;
+    @include media-query($on-mobile) {
+      margin: 0;
+      width: 100px;
+      height: 100px;
+    }
   }
   
   .title-header {
@@ -24,6 +29,10 @@
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
+    @include media-query($on-mobile) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 }
 
@@ -32,10 +41,6 @@
   font-weight: 400;
   letter-spacing: -1px;
   margin-bottom: 0;
-
-  @include media-query($on-palm) {
-    padding-right: 45px;
-  }
 }
 
 .site-nav {
@@ -65,21 +70,33 @@
     grid-template-columns: repeat(auto-fit, 370px);
     grid-row-gap: 15px;
     justify-content: center;
+    @include media-query($content-width) {
+      display: inline-block;
+    }
   }
   img {
     max-width: 150px;
+    @include media-query($on-mobile) {
+      max-width: 100px;
+    }
   }
   .post-card-preview {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 5px;
+    margin-left: 20px;
+    @include media-query($on-mobile) {
+      margin-left: 5px;
+    }
   }
   .post-card {
     margin: 4px 8px;
     overflow: hidden;
     display: flex;
-    width: 100%;
+    @include media-query($on-mobile) {
+      margin: 0;
+    }
     .excerpt {
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -91,6 +108,10 @@
       font-size: 1.0rem;
       p {
         margin: 0;
+      }
+      @include media-query($on-mobile) {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 1;
       }
     }
     .category {
@@ -105,7 +126,10 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      width: 210px;
+      @include media-query($on-mobile) {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
     }
     .date {
       display: inline-block;
@@ -211,6 +235,10 @@ footer {
 .page-content {
   padding: $spacing-unit 0;
   flex: 1 0 auto;
+
+  @include media-query($on-mobile) {
+    padding: 10px 0;
+  }
 }
 
 .page-heading {
