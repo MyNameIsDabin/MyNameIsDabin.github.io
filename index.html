@@ -13,7 +13,8 @@
 <script type="application/ld+json">
 {"url":"/","headline":"소개","name":"초긍정 개발자 다빈","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="초긍정 개발자 다빈" /><script src="/assets/js/main.js"></script>
+<script src="/assets/js/d3.min.js"></script>
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="초긍정 개발자 다빈" /><script src="/assets/js/main.js"></script>
 </head><body><header class="site-header">
 
   <div class="wrapper"><div class="title-header">
@@ -47,16 +48,109 @@
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">소개</h1>
-  </header>
-
+  안녕하세요. 백수 개발자 다빈입니다.
   <div class="post-content">
-    <p>소개</p>
+    
 
   </div>
+  <h2>기술</h2>
+  <div class="chart-container"></div>
+  <h2>프로젝트</h2>
+  <div class="projects">
+    <div class="project in-the-cube">
+      <h3>2014.08</h3>
+      <div class="info">
+        <span>in the cube</span>
+        <span>Android, Windows</span>
+        <span>GM:S(gml)</span>
+      </div>
+      <p>
+        <!-- <img src="/images/about/00.png"></img> -->
+        플랫포머 형식의 퍼즐게임입니다. 
+      </p>
+    </div>
+    <div class="project company">
+      <div>
+        <h3>2015.03 ~ 2017.01</h3>
+        <div class="info">
+          <span>직장상사 혼내주기</span>
+          <span>Android</span>
+          <span>Cocos2d-x</span>
+        </div>
+        <div class="info">
+          <span>보이스피싱</span>
+          <span>Android, ios</span>
+          <span>Cocos2d-x</span>
+        </div>
+        <div class="info">
+          <span>Hero’s gone</span>
+          <span>Android, ios</span>
+          <span>Cocos2d-x</span>
+        </div>
+        <div class="info">
+          <span>SlitherCoin.io</span>
+          <span>Android, ios</span>
+          <span>Cocos2d-x</span>
+        </div>
+        <div class="info">
+          <span>서바이벌빙고</span>
+          <span>Android, ios</span>
+          <span>Cocos2d-x</span>
+        </div>
+        <p>
+          회사에 소속되어 개발에 참여한 게임 5종입니다.
+        </p>
+      </div>
+    </div>
+    <div class="project airforce">
+      <div>
+        <h3>2017.09 ~ 2019.08</h3>
+        <div class="info">
+          <span>낙뢰표출체계</span>
+          <span>Web</span>
+          <span>Vue.js, D3.js, PHP</span>
+        </div>
+        <div class="info">
+          <span>태풍조회체계</span>
+          <span>Web</span>
+          <span>Vue.js, D3.js, PHP</span>
+          <!-- <p>
+            <img src="/images/about/03.jpg"></img>
+          </p> -->
+        </div>
+        <div class="info">
+          <span>웹기상정보지원체계</span>
+          <span>Web</span>
+          <span>Vue.js, D3.js, Node.js, MongoDB</span>
+          <!-- <p>
+            <img src="/images/about/01.jpg"></img>
+            <img src="/images/about/02.jpg"></img>
+          </p> -->
+        </div>
+        <p>
+          공군 기상단 개발실에서 참여한 웹 기반 프로젝트 입니다.
+        </p>
+      </div>
+    </div>
+    <div class="project current">
+      <h3>2019.09 ~ </h3>
+      무능력한 백수
+    </div>
+  </div>
 </article>
+<script>
+  const dataset = [
+    {"name":"C++", "value": 0.9},
+    {"name":"Cocos2d-x", "value": 0.7},
+    {"name":"Godot", "value": 0.2},
+    {"name":"PHP", "value": 0.3},
+    {"name":"JAVA", "value": 0.4},
+    {"name":"JavaScript", "value": 0.9},
+    {"name":"Vue.js", "value": 0.7},
+    {"name":"Node.js", "value": 0.4}
+  ];
+  drawBarChart(".chart-container", dataset);
+</script>
       </div>
     </main><footer class="site-footer h-card">
   <div class="wrapper">  

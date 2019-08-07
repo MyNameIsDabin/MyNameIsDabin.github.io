@@ -39,7 +39,8 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  min-width: 290px; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -277,6 +278,10 @@ table {
   justify-content: center;
   align-items: center; }
 
+@media screen and (max-width: 500px) {
+  article.post {
+    margin-top: 30px; } }
+
 .posts-list .posts {
   margin: 10px;
   height: 180px; }
@@ -440,6 +445,14 @@ footer .svg-icon {
 @media screen and (min-width: 600px) {
   .footer-col {
     float: left; } }
+.chart-container {
+  width: 100%; }
+  .chart-container g.axis text {
+    font-size: 1.0rem; }
+
+.project img {
+  width: 240px; }
+
 /**
  * Page content
  */
