@@ -89,6 +89,12 @@
   }
 }
 
+article.post {
+  @include media-query($on-mobile) {
+    margin-top: 30px;
+  }
+}
+
 .posts-list {
   .posts {
     margin: 10px;
@@ -293,6 +299,12 @@ footer {
   }
 }
 
+.chart-container {
+  width: 100%;
+  g.axis text {
+    font-size: 1.0rem;
+  }
+}
 
 
 /**

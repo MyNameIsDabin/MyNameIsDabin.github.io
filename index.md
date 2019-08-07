@@ -1,6 +1,4 @@
 ---
-layout: page
+layout: about
 title: 소개
 ---
-
-소개
