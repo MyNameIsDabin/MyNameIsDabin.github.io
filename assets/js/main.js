@@ -88,6 +88,23 @@ function drawBarChart(selectorContainer, dataset) {
     .delay((d, i) => i * 150)
     .attr("y", d => y(d.value))
     .attr("height", d => height - y(d.value));
+
+  // svg.selectAll(".label")        
+  //   .data(dataset)
+  //   .enter()
+  //   .append("text")
+  //   .attr("class", "label")
+  //   .style("display",  d =>  d.value === null ? "none" : null)
+  //   .attr("x", d => x(d.name) + (x.bandwidth() / 2) - 14)
+  //   .style("fill",  d => colors[getColorIdx(d.value)])
+  //   .attr("y",  d => height)
+  //   .attr("height", 0)
+  //   .transition()
+  //   .duration(750)
+  //   .delay((d, i) => i * 150)
+  //   .text( d => formatPercent(d.value))
+  //   .attr("y",  d => y(d.value) + 0.1)
+  //   .attr("dy", "-0.7em"); 
 }
 
 window.onload = () => {
