@@ -1,5 +1,4 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-/*#2a7ae2*/
 /**
  * Reset some basic elements
  */
@@ -97,7 +96,7 @@ a {
   color: #111;
   text-decoration: none; }
   a:hover {
-    color: #FF6F61;
+    color: #2a7ae2;
     text-decoration: none; }
   .social-media-list a:hover {
     text-decoration: none; }
