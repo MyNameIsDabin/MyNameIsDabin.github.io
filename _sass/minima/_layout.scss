@@ -92,6 +92,11 @@
 .posts-list {
   .posts {
     margin: 10px;
+    height: 180px;
+    @include media-query($on-mobile) {
+      height: 120px;
+      margin: 5px;
+    }
   }
   .posts:hover {
     cursor: pointer;
@@ -105,6 +110,11 @@
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 200px;
     justify-content: center;
+
+    @include media-query($on-mobile) {
+      grid-template-columns: repeat(auto-fit, 130px);
+      grid-template-rows: 130px;
+    }
   }
   .more {
     display: flex;
