@@ -2,8 +2,7 @@
 layout: post
 title:  "포스트 예시 3"
 date:   2019-06-19 01:27:38 +0900
-categories: jekyll
-tags: javascript
+categories: 글묶음B
 thumbnail: /images/thumbnail0.png
 ---
 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대한민국의 국민이 되는 요건은 법률로 정한다. 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다.

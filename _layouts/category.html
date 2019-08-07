@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<ul class="posts-list grid">
+  {% for category in site.categories %}
+  {%- assign category_name = category | first -%}
+  {% for posts in category %}
+  {%- assign post_count = posts.size -%}
+  {% if posts[0].thumbnail %}
+  <div class="posts">
+  <img src="{{ posts[0].thumbnail }}"/>
+  {% endif %}
+  {% endfor %}
+    <div class="more">
+      <h2 id="{{category | first}}">{{ category_name }}</h2>
+      <h2 class="count">{{ post_count }}</h2>
+    </div>
+  </div>
+  {% endfor %}
+</ul>

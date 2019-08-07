@@ -3,7 +3,7 @@ email: dorothy9795@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-profile_logo: /images/profile-logo1.gif
+profile_logo: /images/thumbnail1.png
 
 pagination:
   enabled: true
@@ -17,7 +17,7 @@ navigation:
     url: /
   - name: 최신 글
     url: /recently
-  - name: 글 목록
+  - name: 글 묶음
     url: /category-list
 
 footer-links:
