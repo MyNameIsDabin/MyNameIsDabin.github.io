@@ -278,7 +278,12 @@ table {
   align-items: center; }
 
 .posts-list .posts {
-  margin: 10px; }
+  margin: 10px;
+  height: 180px; }
+  @media screen and (max-width: 500px) {
+    .posts-list .posts {
+      height: 120px;
+      margin: 5px; } }
 .posts-list .posts:hover {
   cursor: pointer; }
   .posts-list .posts:hover .more {
@@ -289,6 +294,10 @@ table {
   grid-template-columns: repeat(auto-fit, 200px);
   grid-template-rows: 200px;
   justify-content: center; }
+  @media screen and (max-width: 500px) {
+    .posts-list.grid {
+      grid-template-columns: repeat(auto-fit, 130px);
+      grid-template-rows: 130px; } }
 .posts-list .more {
   display: flex;
   position: relative;
