@@ -257,10 +257,32 @@ table {
     background-color: black;
     transition: .3s; }
 
+.posts-list .posts {
+  margin: 10px; }
+.posts-list .posts:hover {
+  cursor: pointer; }
+  .posts-list .posts:hover .more {
+    color: white; }
+.posts-list.grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: 200px;
+  justify-content: center; }
+.posts-list .more {
+  display: flex;
+  position: relative;
+  height: 56px;
+  top: -56px;
+  background-color: #00000080;
+  color: #dedede;
+  justify-content: space-evenly; }
+.posts-list h2 {
+  margin: 8px 0; }
+
 .home.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 370px);
-  grid-row-gap: 15px;
   justify-content: center; }
   @media screen and (max-width: 800px) {
     .home.grid {
@@ -278,14 +300,15 @@ table {
   margin-left: 20px; }
   @media screen and (max-width: 500px) {
     .home .post-card-preview {
-      margin-left: 5px; } }
+      margin-left: 15px; } }
 .home .post-card {
   margin: 4px 8px;
+  margin-bottom: 20px;
   overflow: hidden;
   display: flex; }
   @media screen and (max-width: 500px) {
     .home .post-card {
-      margin: 0; } }
+      margin: 20px 0; } }
   .home .post-card .excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -317,7 +340,7 @@ table {
         font-size: 1.1rem;
         margin-bottom: 0; } }
   .home .post-card .date {
-    display: inline-block;
+    display: block;
     font-size: 0.8rem;
     font-weight: bold;
     color: gray; }
