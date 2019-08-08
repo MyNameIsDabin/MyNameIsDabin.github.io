@@ -305,10 +305,57 @@ footer {
     font-size: 1.0rem;
   }
 }
+.projects {
+  margin: 0 -10px;
+}
 
 .project {
+  padding: 0 8px;
+  box-sizing: border-box;
+  h3 {
+    margin-bottom: 0;
+    border-left: 2px solid #ff7021;
+    padding-left: 10px;
+  }
   img {
-    width: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    margin: 15px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+  }
+  .info-container {
+    display: flex;
+  }
+  p {
+    text-align: left;
+  }
+  &:not(.airforce) .info-container:nth-child(odd) {
+    margin-left: auto;
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+  &.airforce div > .info-container:nth-child(even) {
+    margin-left: auto;
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+  .info-container {
+    width: 50%;
+  }
+  &.current {
+    p {
+      margin: 10px;
+      text-align: center;
+    }
   }
 }
 
@@ -434,7 +481,7 @@ footer {
 .progress-bars {
   width: 100%;
   min-height: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 //The actual bar with the progress

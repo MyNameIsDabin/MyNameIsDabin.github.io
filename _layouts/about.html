@@ -8,86 +8,98 @@ layout: default
   </div>
   <h2>기술</h2>
   <div class="progress-bars"></div>
-  <h2>프로젝트</h2>
+  <h2>프로젝트 경험</h2>
   <div class="projects">
     <div class="project in-the-cube">
       <h3>2014.08</h3>
-      <div class="info">
-        <span>in the cube</span>
-        <span>Android, Windows</span>
-        <span>GM:S(gml)</span>
+      <div class="info-container">
+        <div class="info">
+          <span>in the cube</span>
+          <span>Android, Windows</span>
+          <span>GM:S(gml)</span>
+        </div>
+        <img src="/images/about/00.png"></img>
       </div>
-      <p>
-        <!-- <img src="/images/about/0p0ng"></img> -->
-        플랫포머 형식의 퍼즐게임입니다. 
-      </p>
     </div>
     <div class="project company">
-      <div>
-        <h3>2015.03 ~ 2017.01</h3>
+      <h3>2015.03 ~ 2017.01</h3>
+      <div class="info-container">
         <div class="info">
           <span>직장상사 혼내주기</span>
           <span>Android</span>
           <span>Cocos2d-x</span>
         </div>
+        <img src="/images/about/04.png"></img>
+      </div>
+      <div class="info-container">
         <div class="info">
           <span>보이스피싱</span>
           <span>Android, ios</span>
           <span>Cocos2d-x</span>
         </div>
+        <img src="/images/about/05.png"></img>
+      </div>
+      <div class="info-container">
         <div class="info">
           <span>Hero’s gone</span>
           <span>Android, ios</span>
           <span>Cocos2d-x</span>
         </div>
+        <img src="/images/about/06.png"></img>
+      </div>
+      <div class="info-container">
         <div class="info">
           <span>SlitherCoin.io</span>
           <span>Android, ios</span>
           <span>Cocos2d-x</span>
         </div>
+        <img src="/images/about/07.png"></img>
+      </div>
+      <div class="info-container">
         <div class="info">
           <span>서바이벌빙고</span>
           <span>Android, ios</span>
           <span>Cocos2d-x</span>
         </div>
-        <p>
-          회사에 소속되어 개발에 참여한 게임 5종입니다.
-        </p>
+        <img src="/images/about/08.png"></img>
       </div>
     </div>
     <div class="project airforce">
       <div>
         <h3>2017.09 ~ 2019.08</h3>
-        <div class="info">
-          <span>낙뢰표출체계</span>
-          <span>Web</span>
-          <span>Vue.js, D3.js, PHP</span>
-        </div>
-        <div class="info">
-          <span>태풍조회체계</span>
-          <span>Web</span>
-          <span>Vue.js, D3.js, PHP</span>
-          <!-- <p>
+        <div>
+          <div class="info-container">
+            <div class="info">
+              <span>낙뢰표출체계</span>
+              <span>Web</span>
+              <span>Vue.js, D3.js, PHP</span>
+            </div>
+            <img src="/images/not_found.jpg"></img>
+          </div>
+          <div class="info-container">
+            <div class="info">
+              <span>태풍조회체계</span>
+              <span>Web</span>
+              <span>Vue.js, D3.js, PHP, Tibero</span>
+            </div>
             <img src="/images/about/03.jpg"></img>
-          </p> -->
-        </div>
-        <div class="info">
-          <span>웹기상정보지원체계</span>
-          <span>Web</span>
-          <span>Vue.js, D3.js, Node.js, MongoDB</span>
-          <!-- <p>
+          </div>
+          <div class="info-container">
+            <div class="info">
+                <span>웹기상정보지원체계</span>
+                <span>Web</span>
+                <span>Vue.js, D3.js, Node.js, MongoDB</span>
+            </div>
             <img src="/images/about/01.jpg"></img>
-            <img src="/images/about/02.jpg"></img>
-          </p> -->
+          </div>
         </div>
-        <p>
-          공군 기상단 개발실에서 참여한 웹 기반 프로젝트 입니다.
-        </p>
       </div>
     </div>
     <div class="project current">
       <h3>2019.09 ~ </h3>
-      무능력한 백수
+      <p>
+        무능력한 백수생활
+      </p>
     </div>
   </div>
 </article>
@@ -96,11 +108,12 @@ layout: default
     {"name":"C++", "value": 90},
     {"name":"Cocos2d-x", "value": 70},
     {"name":"Godot", "value": 20},
-    {"name":"PHP", "value": 30},
     {"name":"JAVA", "value": 40},
+    {"name":"PHP", "value": 30},
     {"name":"JavaScript", "value": 90},
     {"name":"Vue.js", "value": 70},
-    {"name":"Node.js", "value": 40}
+    {"name":"Node.js", "value": 40},
+    {"name":"GM:S", "value": 25}
   ];
   drawRoundedChart(".progress-bars", dataset);
 </script>
