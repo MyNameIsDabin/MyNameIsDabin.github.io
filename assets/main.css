@@ -477,6 +477,9 @@ footer .svg-icon {
     display: flex; }
   .project p {
     text-align: left; }
+  @media screen and (max-width: 500px) {
+    .project .info span:nth-child(1) {
+      font-size: 0.9rem; } }
   @media screen and (min-width: 700px) {
     .project:not(.airforce) .info-container:nth-child(odd) {
       margin-left: auto;
