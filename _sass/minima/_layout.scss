@@ -320,8 +320,8 @@ footer {
   img {
     border-radius: 50%;
     object-fit: cover;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     margin: 15px;
   }
   .info {
@@ -330,7 +330,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-grow: 1;
+    flex-basis: 50%;
   }
   .info-container {
     display: flex;
@@ -338,23 +338,42 @@ footer {
   p {
     text-align: left;
   }
-  &:not(.airforce) .info-container:nth-child(odd) {
-    margin-left: auto;
-    margin-top: -80px;
-    margin-bottom: -80px;
+  @media screen and (min-width: 700px) {
+    &:not(.airforce) .info-container:nth-child(odd) {
+      margin-left: auto;
+      margin-top: -80px;
+      margin-bottom: -80px;
+    }
+    &.airforce div > .info-container:nth-child(even) {
+      margin-left: auto;
+      margin-top: -80px;
+      margin-bottom: -80px;
+    }
+    .info-container {
+      width: 50%;
+    }
+    .info {
+      flex-grow: 1;
+    }
   }
-  &.airforce div > .info-container:nth-child(even) {
-    margin-left: auto;
-    margin-top: -80px;
-    margin-bottom: -80px;
-  }
-  .info-container {
-    width: 50%;
+  .info span:nth-child(1) {
+    padding: 2px 8px;
+    background-color:#2f2f2f;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
   }
   &.current {
     p {
       margin: 10px;
       text-align: center;
+    }
+  }
+  .svg-icon {
+    width: 34px;
+    height: 34px;
+    path {
+      fill: #292929;
     }
   }
 }
