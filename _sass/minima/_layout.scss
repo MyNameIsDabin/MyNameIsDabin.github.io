@@ -338,6 +338,11 @@ footer {
   p {
     text-align: left;
   }
+  @include media-query($on-mobile) {
+    .info span:nth-child(1) {
+      font-size: 0.9rem;
+    }
+  }
   @media screen and (min-width: 700px) {
     &:not(.airforce) .info-container:nth-child(odd) {
       margin-left: auto;
