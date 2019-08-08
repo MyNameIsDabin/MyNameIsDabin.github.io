@@ -7,7 +7,7 @@ layout: default
     {{ content }}
   </div>
   <h2>기술</h2>
-  <div class="chart-container"></div>
+  <div class="progress-bars"></div>
   <h2>프로젝트</h2>
   <div class="projects">
     <div class="project in-the-cube">
@@ -18,7 +18,7 @@ layout: default
         <span>GM:S(gml)</span>
       </div>
       <p>
-        <!-- <img src="/images/about/00.png"></img> -->
+        <!-- <img src="/images/about/0p0ng"></img> -->
         플랫포머 형식의 퍼즐게임입니다. 
       </p>
     </div>
@@ -93,14 +93,14 @@ layout: default
 </article>
 <script>
   const dataset = [
-    {"name":"C++", "value": 0.9},
-    {"name":"Cocos2d-x", "value": 0.7},
-    {"name":"Godot", "value": 0.2},
-    {"name":"PHP", "value": 0.3},
-    {"name":"JAVA", "value": 0.4},
-    {"name":"JavaScript", "value": 0.9},
-    {"name":"Vue.js", "value": 0.7},
-    {"name":"Node.js", "value": 0.4}
+    {"name":"C++", "value": 90},
+    {"name":"Cocos2d-x", "value": 70},
+    {"name":"Godot", "value": 20},
+    {"name":"PHP", "value": 30},
+    {"name":"JAVA", "value": 40},
+    {"name":"JavaScript", "value": 90},
+    {"name":"Vue.js", "value": 70},
+    {"name":"Node.js", "value": 40}
   ];
-  drawBarChart(".chart-container", dataset);
+  drawRoundedChart(".progress-bars", dataset);
 </script>

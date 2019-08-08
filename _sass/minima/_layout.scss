@@ -427,3 +427,37 @@ footer {
     width:         calc(50% - (#{$spacing-unit} / 2));
   }
 }
+
+/*
+* Progress bar
+*/
+.progress-bars {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 50px;
+}
+
+//The actual bar with the progress
+.bar {
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  width: 0px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+//The pattern
+.pattern {
+  height: 100%;
+  width: 100%;
+  background-color: #ffc64e;
+}
+
+//Div to display the percentage
+.percentage {
+  margin-left: 0px;
+  padding-top: 2px;
+  text-align: center;
+  color: white;
+}
