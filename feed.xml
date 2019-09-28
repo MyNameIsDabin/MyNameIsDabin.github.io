@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-08T14:50:04+00:00</updated><id>/feed.xml</id><title type="html">초긍정 개발자 다빈</title><subtitle></subtitle><entry><title type="html">포스트 예시 3</title><link href="/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03.html" rel="alternate" type="text/html" title="포스트 예시 3" /><published>2019-06-18T16:27:38+00:00</published><updated>2019-06-18T16:27:38+00:00</updated><id>/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03</id><content type="html" xml:base="/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03.html">&lt;p&gt;국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대한민국의 국민이 되는 요건은 법률로 정한다. 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-28T19:00:35+00:00</updated><id>/feed.xml</id><title type="html">초긍정 개발자 다빈</title><subtitle></subtitle><entry><title type="html">=== 쓰세요</title><link href="/javascript/2019/08/14/00.html" rel="alternate" type="text/html" title="=== 쓰세요" /><published>2019-08-14T18:16:00+00:00</published><updated>2019-08-14T18:16:00+00:00</updated><id>/javascript/2019/08/14/00</id><content type="html" xml:base="/javascript/2019/08/14/00.html">&lt;h3 id=&quot;-와--연산자에-대한-오해&quot;&gt;== 와 === 연산자에 대한 오해&lt;/h3&gt;
+
+&lt;p&gt;== 연산자와 === 연산자는 모두 자바스크립트에서 동등함을 비교할 때 사용합니다.&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 둘의 차이점을 당장 급하게 이해하고 싶다면 위의 예제 하나로 충분합니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;== 연산자는 값이 동등한지만 확인하고 === 연산자는 값이 동등하고, 타입까지 동등한지 비교합니다&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이 설명은 정확하지 않지만 시간이 없는 개발자들에게 빠른 이해를 돕게 하는 가성비 좋은 설명이라고는 생각합니다. 그렇다면 이 글을 느긋하게 커피 한잔 마시면서 천천히 읽어도 시간이 남아도는 개발자들이라면 이 연산자에 대한 좀 더 자세한 내용을 알아두실 필요가 있겠네요. 사실 두 연산자의 진짜 차이점은 단순히 타입까지 동등한지 비교하는 것이 아닌, 우리 몰래 암묵적으로 형 변환을 허용하는가 입니다. 이제 가성비 좋은 설명을 대신할 설명을 준비해두었습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;== 연산자는 암묵적 형 변환을 허용하고 === 연산자는 암묵적 형 변환을 허용하지 않습니다&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 실제로는 (Number(&quot;100&quot;) === 100) 로 비교함.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;자, 이제 됐습니다. 다시 위의 예제를 살펴볼까요? == 연산자의 경우 개발자 몰래 비교할 때 암묵적으로 형 변환을 진행하기 때문에 위와 같이 문자열과 숫자를 비교하는 경우에 문자열을 숫자로 형 변환한 후 비교를 진행하기 때문에 결과는 true가 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;-연산자의-문제점&quot;&gt;== 연산자의 문제점&lt;/h3&gt;
+
+&lt;p&gt;이 포스트의 제목을 ‘=== 쓰세요’ 라고 지은 이유는 사실 여러분들에게 === 연산자를 쓰라고 강제하고 싶은 마음보다는 == 연산자가 가지고 있는 단점을 피하는 가장 쉬운 방법은 그냥 === 연산자를 사용하는 것이기 때문입니다. 다음 문제점을 살펴봅시다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;복잡한 형변환 규칙&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;개발자 몰래 형 변환하는 것 까진 좋은데 이 규칙 자체가 워낙 복잡한데다가 지멋대로 일때가 많습니다. 애초에 == 연산자의 진짜 이름이 추상적 동등비교 인 것 부터 코드의 가독성과는 조금 먼 이야기라는게 느껴집니다.&lt;/p&gt;
+
+&lt;p&gt;위는 추상적 동등비교 (==) 를 사용했을 때 발생하는 형변환을 정리해 놓은 표인데 Equality_comparisons_and_sameness 에서 확인할 수 있습니다. 이 표를 달달 외우고 다닐 개발자가 몇이나 될지는 모르겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;예상하기 어려운 형 변환&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;당신이 결벽이 심한 개발자라서 복잡한 표를 전부 달달 외웠더라도 형 변환을 쉽게 예측하는건 어렵습니다. 자바스크립트의 암묵적 형변환에 대한 특이 사례(물론 제대로 짚고 넘어가면 합리적일테지만)는 여러 존재하지만 그 중 몇개를 추려보았습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;흠.. 그렇습니다. 이해하기 힘들겠지만 자바스크립트 입장에서는 나름 합리적인 형변환이 이루어집니다. 굳이 어떻게 형 변환 되는지 살펴보자면 첫번째 라인의 경우 일단 배열의 경우 toPrimitive 정의에 의해서 배열은 문자열로 형 변환 됩니다. 때문에 Array(3)은 String(Array(3))로 형 변환 되면서 “,,” 가 되고, 결과적으로 true로 비교됩니다. 그렇다면 두번째 라인은 어떨까요?&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;두번째 라인의 경우 문자열로 형 변환 되는 두 “0” 이 리터럴인지 아닌지를 생각하면 됩니다. 배열 [0] 이 문자열로 형 변환 될 때 리터럴이 아닌 위 예제에서의 후자의 경우처럼 만들어지기 때문에 false가 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// [] == false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;세번째 라인의 경우 동등비교 이전에 위와같이 ! 연산자로 인해서 Boolean 으로 변환되어 비교된다는걸 잊지 않는다면 추론할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;-쓰세요&quot;&gt;=== 쓰세요&lt;/h3&gt;
+
+&lt;p&gt;암묵적 형 변환은 속사정을 들어보면 나름 합리적이지만 예측하기 어려운게 사실입니다. 대부분의 경우 여러분의 예상대로 작동하겠지만 결국 버그는 예측하지 못하는 상황에서 발생합니다. 다시 말하지만 == 연산자의 동작방식을 정확히 이해하지 못하겠다면 그냥 피하는게 답입니다.&lt;/p&gt;</content><author><name></name></author><summary type="html">== 와 === 연산자에 대한 오해</summary></entry><entry><title type="html">포스트 예시 3</title><link href="/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03.html" rel="alternate" type="text/html" title="포스트 예시 3" /><published>2019-06-18T16:27:38+00:00</published><updated>2019-06-18T16:27:38+00:00</updated><id>/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03</id><content type="html" xml:base="/%EA%B8%80%EB%AC%B6%EC%9D%8Cb/2019/06/18/ex03.html">&lt;p&gt;국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대한민국의 국민이 되는 요건은 법률로 정한다. 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다.&lt;/p&gt;
 
 &lt;p&gt;국가는 노인과 청소년의 복지향상을 위한 정책을 실시할 의무를 진다. 비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한 조치를 할 수 있다.&lt;/p&gt;
 
