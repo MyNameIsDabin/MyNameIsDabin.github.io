@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "포스트 예시 6"
+description: "포스트 예시입니다."
 date:   2019-06-19 01:27:38 +0900
 categories: 글묶음C
 thumbnail: /images/thumbnail0.png

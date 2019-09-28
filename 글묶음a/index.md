@@ -1,12 +1,12 @@
 ---
 layout: blog
-title: javascript
-description: "javascript"
+title: 글묶음a
+description: "글묶음a"
 pagination: 
   enabled: true
   collection: all
-  category: javascript
-  permalink: /javascript/:num/
+  category: 글묶음a
+  permalink: /글묶음a/:num/
   sort_field: 'date'
   sort_reverse: true
 ---

@@ -8,7 +8,9 @@ layout: default
   {%- assign post_count = posts.size -%}
   {% if posts[0].thumbnail %}
   <div class="posts">
-  <img src="{{ posts[0].thumbnail }}"/>
+  <a href="{{ category_name }}">
+    <img src="{{ posts[0].thumbnail }}"/>
+  </a>
   {% endif %}
   {% endfor %}
     <div class="more">
