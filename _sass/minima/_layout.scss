@@ -36,6 +36,11 @@
   }
 }
 
+.projects {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 400;
@@ -103,6 +108,10 @@ article.post {
       height: 120px;
       margin: 5px;
     }
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
   .posts:hover {
     cursor: pointer;
@@ -129,7 +138,18 @@ article.post {
     top: -56px;
     background-color: #00000080;
     color: #dedede;
+    align-items: center;
     justify-content: space-evenly;
+    pointer-events: none;
+    font-size: 1.0rem;
+    h2 {
+      margin: 0;
+    }
+    @include media-query($on-mobile) {
+      height: 35px;
+      top: -35px;
+      font-size: 0.6rem;
+    }
   }
   h2 {
     margin: 8px 0;
@@ -139,35 +159,41 @@ article.post {
 .home {
   &.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 370px);
+    grid-template-columns: repeat(auto-fit, 740px);
     justify-content: center;
     @include media-query($content-width) {
       display: inline-block;
     }
   }
   img {
+    min-width: 150px;
     max-width: 150px;
+    height: 150px;
     @include media-query($on-mobile) {
       max-width: 100px;
+      min-width: 100px;
+      height: 100px;
     }
   }
   .post-card-preview {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 5px;
-    margin-left: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    width: calc(100% - 150px);
     @include media-query($on-mobile) {
-      margin-left: 15px;
+      padding-left: 15px;
+      width: calc(100% - 100px);
     }
   }
   .post-card {
-    margin: 4px 8px;
-    margin-bottom: 20px;
+    padding: 4px 8px;
+    padding-bottom: 20px;
     overflow: hidden;
     display: flex;
     @include media-query($on-mobile) {
-      margin: 20px 0;
+      padding: 20px 0;
     }
     .excerpt {
       display: -webkit-box;
@@ -177,7 +203,7 @@ article.post {
       white-space: normal;
       -webkit-line-clamp: 2;
       margin: 0;
-      font-size: 1.0rem;
+      font-size: 1.05rem;
       p {
         margin: 0;
       }
@@ -432,7 +458,9 @@ footer {
   margin-bottom: $spacing-unit;
 }
 
-.post-title,
+.post-title {
+  font-size: 2.0rem;
+}
 .post-content h1 {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
@@ -445,6 +473,24 @@ footer {
 
 .post-content {
   margin-bottom: $spacing-unit;
+  a {
+    color: #039be5;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.05rem;
+  }
+
+  h2, h3, h4 {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 4px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   h2 {
     @include relative-font-size(1.75);
@@ -467,6 +513,14 @@ footer {
 
     @media screen and (min-width: $on-large) {
       @include relative-font-size(1.25);
+    }
+  }
+
+  h5 {
+    @include relative-font-size(0.95);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.0);
     }
   }
 }

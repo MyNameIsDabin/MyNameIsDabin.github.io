@@ -12,6 +12,13 @@ pagination:
   sort_field: "date"
   sort_reverse: true
 
+#이건.. 한글 카테고리명을 지원하기위해서 사용함.
+category_kr_wrapping:
+  cpp: "C++"
+  godot: "Godot"
+  workreview: "작업후기"
+  javascript: "자바스크립트"
+
 navigation:
   - name: 소개
     url: /

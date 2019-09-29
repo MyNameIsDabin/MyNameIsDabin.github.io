@@ -4,6 +4,7 @@ layout: default
 <ul class="posts-list grid">
   {% for category in site.categories %}
   {%- assign category_name = category | first -%}
+  {%- assign kor_wrapping = site.category_kr_wrapping[category_name] -%}
   {% for posts in category %}
   {%- assign post_count = posts.size -%}
   {% if posts[0].thumbnail %}
@@ -14,7 +15,11 @@ layout: default
   {% endif %}
   {% endfor %}
     <div class="more">
+      {% if kor_wrapping %}
+      <h2 id="{{category | first}}">{{ kor_wrapping }}</h2>
+      {% else %}
       <h2 id="{{category | first}}">{{ category_name }}</h2>
+      {% endif %}
       <h2 class="count">{{ post_count }}</h2>
     </div>
   </div>

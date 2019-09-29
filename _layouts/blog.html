@@ -4,6 +4,8 @@ layout: default
 <div class="home grid">
   <!-- This loops through the paginated posts -->
   {% for post in paginator.posts %}
+  {%- assign category_name = post.categories | first -%}
+  {%- assign kor_wrapping = site.category_kr_wrapping[category_name] -%}
     <div class="post-card">
       <a href="{{ post.url }}">
         <img src="{{ post.thumbnail }}"></img>
@@ -14,7 +16,11 @@ layout: default
           <div class="excerpt">{{ post.description }}</div>
         </div>
         <div>
-          <div class="category">{{ post.categories }}</div>
+          {% if kor_wrapping %}
+          <div class="category"><a href="{{ category_name | prepend: '/'}}">{{ kor_wrapping }}</a></div>
+          {% else %}
+          <div class="category"><a href="{{ category_name | prepend: '/'}}">{{ category_name }}</a></div>
+          {% endif %}
           <div class="date">{{ post.date | date: "%a, %B %-d, %Y"}}</div>
         </div>
       </div>
