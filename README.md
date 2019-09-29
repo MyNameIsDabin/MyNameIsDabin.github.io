@@ -3,7 +3,7 @@
 ```
 jekyll serve
 ```
-ruby gem 과 Travis CLI 기반으로 돌아갑니다. 다음 파일을 반드시 수정하셔야 할겁니다.
+ruby gem 과 Travis CI 기반으로 돌아갑니다. 다음 파일을 반드시 수정하셔야 할겁니다.
   - script/cibuild
   - .travis.yml
   - _config.yml
