@@ -7,7 +7,7 @@ layout: default
   {%- assign category_name = post.categories | first -%}
   {%- assign kor_wrapping = site.category_kr_wrapping[category_name] -%}
     <div class="post-card">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url }}" class="cropped">
         <img src="{{ post.thumbnail }}"></img>
       </a>
       <div class="post-card-preview">
