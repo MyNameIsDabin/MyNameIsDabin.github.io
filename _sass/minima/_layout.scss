@@ -523,6 +523,10 @@ footer {
       @include relative-font-size(1.0);
     }
   }
+  img {
+    display: block;
+    margin: auto;
+  }
 }
 
 
