@@ -123,9 +123,8 @@ blockquote {
 pre,
 code {
   font-size: 1.078125rem;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eef; }
+  font-size: 0.9rem;
+  background-color: #f1f3f4; }
 
 code {
   padding: 1px 5px; }
@@ -234,6 +233,10 @@ table {
         flex-direction: column-reverse;
         justify-content: center; } }
 
+.projects {
+  display: flex;
+  flex-direction: column-reverse; }
+
 .site-title {
   font-size: 1.86875rem;
   font-weight: 400;
@@ -289,6 +292,9 @@ table {
     .posts-list .posts {
       height: 120px;
       margin: 5px; } }
+  .posts-list .posts img {
+    height: 100%;
+    width: 100%; }
 .posts-list .posts:hover {
   cursor: pointer; }
   .posts-list .posts:hover .more {
@@ -310,39 +316,55 @@ table {
   top: -56px;
   background-color: #00000080;
   color: #dedede;
-  justify-content: space-evenly; }
+  align-items: center;
+  justify-content: space-evenly;
+  pointer-events: none;
+  font-size: 1.0rem; }
+  .posts-list .more h2 {
+    margin: 0; }
+  @media screen and (max-width: 500px) {
+    .posts-list .more {
+      height: 35px;
+      top: -35px;
+      font-size: 0.6rem; } }
 .posts-list h2 {
   margin: 8px 0; }
 
 .home.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 370px);
+  grid-template-columns: repeat(auto-fit, 740px);
   justify-content: center; }
   @media screen and (max-width: 800px) {
     .home.grid {
       display: inline-block; } }
 .home img {
-  max-width: 150px; }
+  min-width: 150px;
+  max-width: 150px;
+  height: 150px; }
   @media screen and (max-width: 500px) {
     .home img {
-      max-width: 100px; } }
+      max-width: 100px;
+      min-width: 100px;
+      height: 100px; } }
 .home .post-card-preview {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5px;
-  margin-left: 20px; }
+  padding: 5px;
+  padding-left: 20px;
+  width: calc(100% - 150px); }
   @media screen and (max-width: 500px) {
     .home .post-card-preview {
-      margin-left: 15px; } }
+      padding-left: 15px;
+      width: calc(100% - 100px); } }
 .home .post-card {
-  margin: 4px 8px;
-  margin-bottom: 20px;
+  padding: 4px 8px;
+  padding-bottom: 20px;
   overflow: hidden;
   display: flex; }
   @media screen and (max-width: 500px) {
     .home .post-card {
-      margin: 20px 0; } }
+      padding: 20px 0; } }
   .home .post-card .excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -351,7 +373,7 @@ table {
     white-space: normal;
     -webkit-line-clamp: 2;
     margin: 0;
-    font-size: 1.0rem; }
+    font-size: 1.05rem; }
     .home .post-card .excerpt p {
       margin: 0; }
     @media screen and (max-width: 500px) {
@@ -544,18 +566,31 @@ footer .svg-icon {
 .post-header {
   margin-bottom: 30px; }
 
-.post-title,
+.post-title {
+  font-size: 2.0rem; }
+
 .post-content h1 {
   font-size: 3.01875rem;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (min-width: 800px) {
-    .post-title,
     .post-content h1 {
       font-size: 3.01875rem; } }
 
 .post-content {
   margin-bottom: 30px; }
+  .post-content a {
+    color: #039be5;
+    font-weight: bold; }
+  .post-content p {
+    font-size: 1.05rem; }
+  .post-content h2, .post-content h3, .post-content h4 {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 4px; }
+  .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px; }
   .post-content h2 {
     font-size: 2.0125rem; }
     @media screen and (min-width: 800px) {
@@ -571,6 +606,11 @@ footer .svg-icon {
     @media screen and (min-width: 800px) {
       .post-content h4 {
         font-size: 1.4375rem; } }
+  .post-content h5 {
+    font-size: 1.0925rem; }
+    @media screen and (min-width: 800px) {
+      .post-content h5 {
+        font-size: 1.15rem; } }
 
 .social-media-list {
   display: table;
@@ -626,12 +666,12 @@ footer .svg-icon {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff; }
+  background: #f1f3f4; }
   .highlighter-rouge .highlight {
-    background: #eef; }
+    background: #f1f3f4; }
   .highlight .c {
     color: #998;
-    font-style: italic; }
+    font-size: 0.9rem; }
   .highlight .err {
     color: #a61717;
     background-color: #e3d2d2; }
@@ -647,7 +687,7 @@ footer .svg-icon {
     font-weight: bold; }
   .highlight .c1 {
     color: #998;
-    font-style: italic; }
+    font-size: 0.9rem; }
   .highlight .cs {
     color: #999;
     font-weight: bold;

@@ -15,7 +15,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-08-14T18:16:00+00:00" />
 <script type="application/ld+json">
-{"url":"/javascript/2019/08/14/00.html","headline":"=== 쓰세요","datePublished":"2019-08-14T18:16:00+00:00","dateModified":"2019-08-14T18:16:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/javascript/2019/08/14/00.html"},"description":"== 와 === 연산자에 대한 오해","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"/javascript/2019/08/14/00.html","headline":"=== 쓰세요","dateModified":"2019-08-14T18:16:00+00:00","datePublished":"2019-08-14T18:16:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/javascript/2019/08/14/00.html"},"description":"== 와 === 연산자에 대한 오해","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="/assets/js/d3.min.js"></script>
   <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="초긍정 개발자 다빈" /><script src="/assets/js/main.js"></script>
@@ -61,44 +61,40 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h3 id="-와--연산자에-대한-오해">== 와 === 연산자에 대한 오해</h3>
-
+    <h4 id="-와--연산자에-대한-오해">== 와 === 연산자에 대한 오해</h4>
 <p>== 연산자와 === 연산자는 모두 자바스크립트에서 동등함을 비교할 때 사용합니다.</p>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">100</span><span class="dl">"</span> <span class="o">==</span> <span class="mi">100</span><span class="p">);</span> <span class="c1">// true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">100</span><span class="dl">"</span> <span class="o">===</span> <span class="mi">100</span><span class="p">);</span> <span class="c1">// false</span>
 </code></pre></div></div>
 <p>이 둘의 차이점을 당장 급하게 이해하고 싶다면 위의 예제 하나로 충분합니다.</p>
 
-<blockquote>
-  <p>== 연산자는 값이 동등한지만 확인하고 === 연산자는 값이 동등하고, 타입까지 동등한지 비교합니다</p>
-</blockquote>
+<p><strong>== 연산자는 값이 동등한지만 확인하고 === 연산자는 값이 동등하고, 타입까지 동등한지 비교합니다</strong></p>
 
-<p>이 설명은 정확하지 않지만 시간이 없는 개발자들에게 빠른 이해를 돕게 하는 가성비 좋은 설명이라고는 생각합니다. 그렇다면 이 글을 느긋하게 커피 한잔 마시면서 천천히 읽어도 시간이 남아도는 개발자들이라면 이 연산자에 대한 좀 더 자세한 내용을 알아두실 필요가 있겠네요. 사실 두 연산자의 진짜 차이점은 단순히 타입까지 동등한지 비교하는 것이 아닌, 우리 몰래 암묵적으로 형 변환을 허용하는가 입니다. 이제 가성비 좋은 설명을 대신할 설명을 준비해두었습니다.</p>
+<p>이 설명은 정확하지 않지만 시간이 없는 개발자들에게 빠른 이해를 돕게 하는 가성비 좋은 설명이라고는 생각합니다. 그렇다면 이 글을 느긋하게 커피 한잔 마시면서 천천히 읽어도 시간이 남아도는 개발자들이라면 이 연산자에 대한 좀 더 자세한 내용을 알아두실 필요가 있겠네요. 사실 두 연산자의 진짜 차이점은 단순히 타입까지 동등한지 비교하는 것이 아닌, 우리 몰래 암묵적으로 형 변환을 허용하는가 입니다.</p>
 
-<blockquote>
-  <p>== 연산자는 암묵적 형 변환을 허용하고 === 연산자는 암묵적 형 변환을 허용하지 않습니다</p>
-</blockquote>
+<p><strong>== 연산자는 암묵적 형 변환을 허용하고 === 연산자는 암묵적 형 변환을 허용하지 않습니다</strong></p>
+
+<p>이제는 위와같이 정의할 수 있겠네요.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">100</span><span class="dl">"</span> <span class="o">==</span> <span class="mi">100</span><span class="p">);</span> <span class="c1">// 실제로는 (Number("100") === 100) 로 비교함.</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">100</span><span class="dl">"</span> <span class="o">===</span> <span class="mi">100</span><span class="p">);</span>
 </code></pre></div></div>
-<p>자, 이제 됐습니다. 다시 위의 예제를 살펴볼까요? == 연산자의 경우 개발자 몰래 비교할 때 암묵적으로 형 변환을 진행하기 때문에 위와 같이 문자열과 숫자를 비교하는 경우에 문자열을 숫자로 형 변환한 후 비교를 진행하기 때문에 결과는 true가 됩니다.</p>
+<p>다시 위의 예제를 살펴볼까요? == 연산자의 경우 개발자 몰래 비교할 때 암묵적으로 형 변환을 진행하기 때문에 위와 같이 문자열과 숫자를 비교하는 경우에 문자열을 숫자로 형 변환한 후 비교를 진행하기 때문에 결과는 true가 됩니다.</p>
 
-<h3 id="-연산자의-문제점">== 연산자의 문제점</h3>
+<h4 id="-연산자의-문제점">== 연산자의 문제점</h4>
 
 <p>이 포스트의 제목을 ‘=== 쓰세요’ 라고 지은 이유는 사실 여러분들에게 === 연산자를 쓰라고 강제하고 싶은 마음보다는 == 연산자가 가지고 있는 단점을 피하는 가장 쉬운 방법은 그냥 === 연산자를 사용하는 것이기 때문입니다. 다음 문제점을 살펴봅시다.</p>
 
-<ol>
-  <li>복잡한 형변환 규칙</li>
-</ol>
+<h5 id="복잡한-형변환-규칙">복잡한 형변환 규칙</h5>
 
 <p>개발자 몰래 형 변환하는 것 까진 좋은데 이 규칙 자체가 워낙 복잡한데다가 지멋대로 일때가 많습니다. 애초에 == 연산자의 진짜 이름이 추상적 동등비교 인 것 부터 코드의 가독성과는 조금 먼 이야기라는게 느껴집니다.</p>
 
-<p>위는 추상적 동등비교 (==) 를 사용했을 때 발생하는 형변환을 정리해 놓은 표인데 Equality_comparisons_and_sameness 에서 확인할 수 있습니다. 이 표를 달달 외우고 다닐 개발자가 몇이나 될지는 모르겠습니다.</p>
+<p><img src="/images/post/2019-08-15-00/0.png" alt="&quot;추상적 동등비교&quot;" /></p>
 
-<ol>
-  <li>예상하기 어려운 형 변환</li>
-</ol>
+<p>위는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness">Equality_comparisons_and_sameness</a> 에서 확인할 수 있는 추상적 동등비교(==)를 사용했을 때 발생하는 형변환을 정리해 놓은 표 입니다. 이 표를 달달 외우고 다닐 개발자가 몇이나 될지는 모르겠습니다.</p>
+
+<h5 id="예상하기-어려운-형-변환">예상하기 어려운 형 변환</h5>
 
 <p>당신이 결벽이 심한 개발자라서 복잡한 표를 전부 달달 외웠더라도 형 변환을 쉽게 예측하는건 어렵습니다. 자바스크립트의 암묵적 형변환에 대한 특이 사례(물론 제대로 짚고 넘어가면 합리적일테지만)는 여러 존재하지만 그 중 몇개를 추려보았습니다.</p>
 
@@ -120,7 +116,7 @@
 
 <p>세번째 라인의 경우 동등비교 이전에 위와같이 ! 연산자로 인해서 Boolean 으로 변환되어 비교된다는걸 잊지 않는다면 추론할 수 있습니다.</p>
 
-<h3 id="-쓰세요">=== 쓰세요</h3>
+<h4 id="-쓰세요">=== 쓰세요</h4>
 
 <p>암묵적 형 변환은 속사정을 들어보면 나름 합리적이지만 예측하기 어려운게 사실입니다. 대부분의 경우 여러분의 예상대로 작동하겠지만 결국 버그는 예측하지 못하는 상황에서 발생합니다. 다시 말하지만 == 연산자의 동작방식을 정확히 이해하지 못하겠다면 그냥 피하는게 답입니다.</p>
 
