@@ -611,6 +611,9 @@ footer .svg-icon {
     @media screen and (min-width: 800px) {
       .post-content h5 {
         font-size: 1.15rem; } }
+  .post-content img {
+    display: block;
+    margin: auto; }
 
 .social-media-list {
   display: table;
