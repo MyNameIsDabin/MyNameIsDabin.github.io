@@ -1,4 +1,5 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Gothic+Coding|Noto+Sans+KR&display=swap);
 /**
  * Reset some basic elements
  */
@@ -124,10 +125,14 @@ pre,
 code {
   font-size: 1.078125rem;
   font-size: 0.9rem;
-  background-color: #f1f3f4; }
+  background-color: #f1f3f4;
+  font-family: 'Nanum Gothic', sans-serif; }
+  pre.highlighter-rouge,
+  code.highlighter-rouge {
+    font-weight: bold; }
 
 code {
-  padding: 1px 5px; }
+  padding: 5px 5px; }
 
 pre {
   padding: 8px 12px;
@@ -673,8 +678,9 @@ footer .svg-icon {
   .highlighter-rouge .highlight {
     background: #f1f3f4; }
   .highlight .c {
-    color: #998;
-    font-size: 0.9rem; }
+    color: #36ad45;
+    font-size: 0.9rem;
+    font-style: oblique; }
   .highlight .err {
     color: #a61717;
     background-color: #e3d2d2; }
@@ -689,8 +695,9 @@ footer .svg-icon {
     color: #999;
     font-weight: bold; }
   .highlight .c1 {
-    color: #998;
-    font-size: 0.9rem; }
+    color: #36ad45;
+    font-size: 0.9rem;
+    font-style: oblique; }
   .highlight .cs {
     color: #999;
     font-weight: bold;
