@@ -3,7 +3,7 @@ layout: post
 title:  "배열과 포인터는 다르다"
 description: "배열과 포인터는 다릅니다"
 date:   2019-10-01 03:25:00 +0900
-categories: javascript
+categories: cpp
 thumbnail: /images/thumbnail0.png
 comments: true
 ---
